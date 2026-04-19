@@ -1,12 +1,17 @@
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Public Variables
-    public float verticalSpeed = 5f;
+    // Vertical Speed
+    private float maxVerticalSpeed = 8f;
+    private float acceleration = 25f;
 
-    // Private Variables
+    private float targetSpeed;
+    private float currentVerticalSpeed;
+
+    // Else
     private Rigidbody2D rb;
     private float verticalInput;
     private float pixelsPerUnit = 32f;
@@ -25,11 +30,21 @@ public class PlayerMovement : MonoBehaviour
             verticalInput = -1f;
         else
             verticalInput = 0f;
+
     }
  
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, verticalInput * verticalSpeed);
+        targetSpeed = verticalInput * maxVerticalSpeed;
+
+        if (verticalInput == 0)
+            currentVerticalSpeed = 0f;
+        else if (currentVerticalSpeed != 0f && Mathf.Sign(verticalInput) != Mathf.Sign(currentVerticalSpeed))
+            currentVerticalSpeed = 0f;
+        else
+            currentVerticalSpeed = Mathf.MoveTowards(currentVerticalSpeed, targetSpeed, acceleration * Time.fixedDeltaTime);
+        
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentVerticalSpeed);
     }
 
     private void LateUpdate()
