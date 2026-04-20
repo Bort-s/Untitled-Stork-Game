@@ -5,8 +5,7 @@ public class playerHealth : MonoBehaviour
     // Health
     public float timeToDecrease = 3f;
     private float timer;
-
-    // Update is called once per frame
+    
     void Update()
     {
         timer += Time.deltaTime;

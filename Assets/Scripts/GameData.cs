@@ -11,6 +11,8 @@ public class GameData : MonoBehaviour
     public static bool cooldown = false;
     public static bool onCooldown = false;
 
+    public static float gameProgress = 0f;
+
     private void Update()
     {
         if (onCooldown)

@@ -1,12 +1,13 @@
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Debug = UnityEngine.Debug;
 
 public class PlayerMovement : MonoBehaviour
 {
     // Vertical Speed
     private float maxVerticalSpeed = 8f;
-    private float acceleration = 25f;
+    private float verticalAcceleration = 25f;
 
     private float targetSpeed;
     private float currentVerticalSpeed;
@@ -15,6 +16,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float verticalInput;
     private float pixelsPerUnit = 32f;
+
+    // Speed Control
+
+    private float acceleration = 0.08f;
+    private float maxSpeed = 5f;
 
 
     private void Awake()
@@ -31,6 +37,23 @@ public class PlayerMovement : MonoBehaviour
         else
             verticalInput = 0f;
 
+        if (Keyboard.current.dKey.isPressed && Keyboard.current.aKey.isPressed)
+        {
+            
+        }
+        else if (Keyboard.current.aKey.isPressed)
+        {
+            if (GameData.speed > 1f) 
+                GameData.speed -= acceleration;
+                Debug.Log("New Speed: " + GameData.speed);
+        }
+        else if (Keyboard.current.dKey.isPressed)
+        {
+            if (GameData.speed < maxSpeed) 
+                GameData.speed += acceleration;
+                Debug.Log("New Speed: " + GameData.speed);
+        }
+
     }
  
     private void FixedUpdate()
@@ -42,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         else if (currentVerticalSpeed != 0f && Mathf.Sign(verticalInput) != Mathf.Sign(currentVerticalSpeed))
             currentVerticalSpeed = 0f;
         else
-            currentVerticalSpeed = Mathf.MoveTowards(currentVerticalSpeed, targetSpeed, acceleration * Time.fixedDeltaTime);
+            currentVerticalSpeed = Mathf.MoveTowards(currentVerticalSpeed, targetSpeed, verticalAcceleration * Time.fixedDeltaTime);
         
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentVerticalSpeed);
     }
