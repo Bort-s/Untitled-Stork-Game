@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: 2b8b14ed90fab0e4b9be544131e017c6
+guid: 483a2def2d0fd8a4a85c1c26145b4bcf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4073913202809135378
-    second: Stroke-player_0
+      213: 6255413763022110828
+    second: HP Bar_0
   - first:
-      213: 7949136395877558711
-    second: Stroke-player_1
+      213: 3052294857720932668
+    second: HP Bar_1
   - first:
-      213: -5776377217467672389
-    second: Stroke-player_2
+      213: 1721745858983967557
+    second: HP Bar_2
   - first:
-      213: -4734911568329042275
-    second: Stroke-player_3
+      213: 3629140102137727142
+    second: HP Bar_3
   - first:
-      213: -3730531069052560391
-    second: Stroke-player_4
+      213: -9009210520496403008
+    second: HP Bar_4
   - first:
-      213: 4765707083337506666
-    second: Stroke-player_5
+      213: -794283922597815629
+    second: HP Bar_5
   - first:
-      213: 2592374375095932194
-    second: Stroke-player_6
-  - first:
-      213: 4639406064848668243
-    second: Stroke-player_7
+      213: 5433576594053648600
+    second: HP Bar_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -134,13 +131,35 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stroke-player_0
+      name: HP Bar_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 14
+        y: 4
+        width: 77
+        height: 7
+      alignment: 9
+      pivot: {x: -0.00017577333, y: 0.5062994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60c504cca1bfc650800000000000000
+      internalID: 6255413763022110828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HP Bar_1
+      rect:
+        serializedVersion: 2
+        x: 96
         y: 0
-        width: 64
-        height: 64
+        width: 96
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,64 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 21166333972798830800000000000000
-      internalID: 4073913202809135378
+      spriteID: c392538500eeb5a20800000000000000
+      internalID: 3052294857720932668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stroke-player_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b9296b8f61015e60800000000000000
-      internalID: 7949136395877558711
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stroke-player_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb81e28768f26dfa0800000000000000
-      internalID: -5776377217467672389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stroke-player_3
+      name: HP Bar_2
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 64
-        height: 64
+        width: 96
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +190,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d961cd6e3073a4eb0800000000000000
-      internalID: -4734911568329042275
+      spriteID: 54b3d3e8cbed4e710800000000000000
+      internalID: 1721745858983967557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stroke-player_4
+      name: HP Bar_3
       rect:
         serializedVersion: 2
-        x: 256
+        x: 288
         y: 0
-        width: 64
-        height: 64
+        width: 96
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,42 +212,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9fb509502cd7a3cc0800000000000000
-      internalID: -3730531069052560391
+      spriteID: 6a84b04e1bb4d5230800000000000000
+      internalID: 3629140102137727142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stroke-player_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a6f15eda751332240800000000000000
-      internalID: 4765707083337506666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stroke-player_6
+      name: HP Bar_4
       rect:
         serializedVersion: 2
         x: 384
         y: 0
-        width: 64
-        height: 64
+        width: 96
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2251b6852c6f9f320800000000000000
-      internalID: 2592374375095932194
+      spriteID: 0cd8913b3cad8f280800000000000000
+      internalID: -9009210520496403008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Stroke-player_7
+      name: HP Bar_5
       rect:
         serializedVersion: 2
-        x: 448
+        x: 480
         y: 0
-        width: 64
-        height: 64
+        width: 96
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,8 +256,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35609104c3b726040800000000000000
-      internalID: 4639406064848668243
+      spriteID: 3bad0ce0bf22af4f0800000000000000
+      internalID: -794283922597815629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HP Bar_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d0d17cbf11f76b40800000000000000
+      internalID: 5433576594053648600
       vertices: []
       indices: 
       edges: []
@@ -313,7 +288,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 33c578b1a2959e844861566425fd0569
+    spriteID: ef9c6c8b4468727409acafba43397db0
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +298,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Stroke-player_0: 4073913202809135378
-      Stroke-player_1: 7949136395877558711
-      Stroke-player_2: -5776377217467672389
-      Stroke-player_3: -4734911568329042275
-      Stroke-player_4: -3730531069052560391
-      Stroke-player_5: 4765707083337506666
-      Stroke-player_6: 2592374375095932194
-      Stroke-player_7: 4639406064848668243
+      HP Bar_0: 6255413763022110828
+      HP Bar_1: 3052294857720932668
+      HP Bar_2: 1721745858983967557
+      HP Bar_3: 3629140102137727142
+      HP Bar_4: -9009210520496403008
+      HP Bar_5: -794283922597815629
+      HP Bar_6: 5433576594053648600
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

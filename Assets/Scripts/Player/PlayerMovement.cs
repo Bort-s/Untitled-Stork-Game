@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Speed Control
 
-    private float acceleration = 0.08f;
+    private float acceleration = 0.03f;
     private float maxSpeed = 5f;
 
 
@@ -39,19 +39,17 @@ public class PlayerMovement : MonoBehaviour
 
         if (Keyboard.current.dKey.isPressed && Keyboard.current.aKey.isPressed)
         {
-            
+            // Do nothing, both keys cancel each other out
         }
         else if (Keyboard.current.aKey.isPressed)
         {
             if (GameData.speed > 1f) 
                 GameData.speed -= acceleration;
-                Debug.Log("New Speed: " + GameData.speed);
         }
         else if (Keyboard.current.dKey.isPressed)
         {
             if (GameData.speed < maxSpeed) 
                 GameData.speed += acceleration;
-                Debug.Log("New Speed: " + GameData.speed);
         }
 
     }
