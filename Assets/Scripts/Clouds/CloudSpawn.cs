@@ -6,14 +6,10 @@ using Debug = UnityEngine.Debug;
 public class CloudSpawn : MonoBehaviour
 {
     public GameObject[] cloud;
-    private float xAxisSpawn = 6.5f;
+    private float xAxisSpawn = 7f;
     private float spawnTime = 1.4f;
-    private float spawnRangeY = 3f;
+    private float spawnRangeY = 2f;
     private bool spawn = true;
-    private void Start()
-    {
-        
-    }
 
     private void Update()
     {

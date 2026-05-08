@@ -1,28 +1,10 @@
 fileFormatVersion: 2
-guid: 483a2def2d0fd8a4a85c1c26145b4bcf
+guid: de5b0980473b46842883eb3b5fcfc3ca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6255413763022110828
-    second: HP Bar_0
-  - first:
-      213: 3052294857720932668
-    second: HP Bar_1
-  - first:
-      213: 1721745858983967557
-    second: HP Bar_2
-  - first:
-      213: 3629140102137727142
-    second: HP Bar_3
-  - first:
-      213: -9009210520496403008
-    second: HP Bar_4
-  - first:
-      213: -794283922597815629
-    second: HP Bar_5
-  - first:
-      213: 5433576594053648600
-    second: HP Bar_6
+      213: -5289308360602547010
+    second: Wall-Clouds_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,155 +113,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HP Bar_0
+      name: Wall-Clouds_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 4
-        width: 77
-        height: 7
-      alignment: 9
-      pivot: {x: -0.00017577333, y: 0.5062994}
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c60c504cca1bfc650800000000000000
-      internalID: 6255413763022110828
+      spriteID: ebc08cae11a9896b0800000000000000
+      internalID: -5289308360602547010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HP Bar_1
+      name: Wall-Clouds_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07aaea9fa1584b84c8ca0780ac0619bb
+      internalID: 1355679900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall-Clouds_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4f25d9c28c9e34e8204d97f7a7e7c0
+      internalID: 455240657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall-Clouds_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 96
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c392538500eeb5a20800000000000000
-      internalID: 3052294857720932668
+      spriteID: 77d253d1c4e14a84e85457cc8f3180f1
+      internalID: -874469015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HP Bar_2
+      name: Wall-Clouds_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffe09dfd5436ff45a2781ff9ab8b0c0
+      internalID: 1473097503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall-Clouds_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d9552371f677d428e0f086f26152ed
+      internalID: 1723377653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall-Clouds_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 96
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 54b3d3e8cbed4e710800000000000000
-      internalID: 1721745858983967557
+      spriteID: e035e388f0bbc6242a58819cba624fd8
+      internalID: -1480618832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HP Bar_3
+      name: Wall-Clouds_7
       rect:
         serializedVersion: 2
-        x: 288
+        x: 224
         y: 0
-        width: 96
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6a84b04e1bb4d5230800000000000000
-      internalID: 3629140102137727142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HP Bar_4
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 96
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0cd8913b3cad8f280800000000000000
-      internalID: -9009210520496403008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HP Bar_5
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 96
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3bad0ce0bf22af4f0800000000000000
-      internalID: -794283922597815629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HP Bar_6
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 96
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d0d17cbf11f76b40800000000000000
-      internalID: 5433576594053648600
+      spriteID: 983808c012d7e4549b49602eca289347
+      internalID: -1687814411
       vertices: []
       indices: 
       edges: []
@@ -288,7 +292,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ef9c6c8b4468727409acafba43397db0
+    spriteID: fc26c2fc1fdd1b24fae39534d21d6497
     internalID: 0
     vertices: []
     indices: 
@@ -296,15 +300,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":1,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: False
     nameFileIdTable:
-      HP Bar_0: 6255413763022110828
-      HP Bar_1: 3052294857720932668
-      HP Bar_2: 1721745858983967557
-      HP Bar_3: 3629140102137727142
-      HP Bar_4: -9009210520496403008
-      HP Bar_5: -794283922597815629
-      HP Bar_6: 5433576594053648600
+      Wall-Clouds_0: -5289308360602547010
+      Wall-Clouds_1: 1355679900
+      Wall-Clouds_2: 455240657
+      Wall-Clouds_3: -874469015
+      Wall-Clouds_4: 1473097503
+      Wall-Clouds_5: 1723377653
+      Wall-Clouds_6: -1480618832
+      Wall-Clouds_7: -1687814411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

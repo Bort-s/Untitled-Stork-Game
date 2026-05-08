@@ -39,7 +39,7 @@ public class HPBar : MonoBehaviour
         scale.x = actualHealt * 0.01f;
         HPBarObject.transform.localScale = scale;
         Vector3 pos = HPBarObject.transform.localPosition;
-        pos.x = -1.41703f;
+        pos.x = -1.06256f;
         HPBarObject.transform.localPosition = pos;
         yield return new WaitForSeconds(velocidad);
         decreasing = false;

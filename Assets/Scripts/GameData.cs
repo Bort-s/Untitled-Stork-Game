@@ -17,6 +17,8 @@ public class GameData : MonoBehaviour
 
     
     private bool onCoroutine = false;
+    private bool deadMessage = false;
+    private bool gameCompletedMessage = false;
     
 
 
@@ -43,17 +45,26 @@ public class GameData : MonoBehaviour
         if (playerHealth <= 0f)
         {
             isDead = true;
-            Debug.Log("Player has died.");
+            if (!deadMessage)
+            {
+                Debug.Log("Player has died.");
+                deadMessage = true;
+            }
         }
 
         if (gameProgress < maxGameProgress && !onCoroutine)
         {
             StartCoroutine(GameProgression());
             onCoroutine = true;
-        } else if (gameProgress >= maxGameProgress)
+        } 
+        else if (gameProgress >= maxGameProgress)
         {
             gameCompleted = true;
-            Debug.Log("Game Completed!");
+            if (!gameCompletedMessage)
+            {
+                Debug.Log("Game Completed!");
+                gameCompletedMessage = true;
+            }
         }
     }
 

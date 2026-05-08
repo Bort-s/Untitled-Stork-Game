@@ -1,28 +1,22 @@
 fileFormatVersion: 2
-guid: 483a2def2d0fd8a4a85c1c26145b4bcf
+guid: f7505edffe5d80048a15a78b30610a2f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6255413763022110828
-    second: HP Bar_0
+      213: -198938125430884413
+    second: Menu_0
   - first:
-      213: 3052294857720932668
-    second: HP Bar_1
+      213: -1909268238846872576
+    second: Menu_1
   - first:
-      213: 1721745858983967557
-    second: HP Bar_2
+      213: -275939537401066862
+    second: Menu_2
   - first:
-      213: 3629140102137727142
-    second: HP Bar_3
+      213: 2406227903653740696
+    second: Menu_3
   - first:
-      213: -9009210520496403008
-    second: HP Bar_4
-  - first:
-      213: -794283922597815629
-    second: HP Bar_5
-  - first:
-      213: 5433576594053648600
-    second: HP Bar_6
+      213: -894268473198475317
+    second: Menu_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,155 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HP Bar_0
+      name: Menu_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 4
-        width: 77
-        height: 7
-      alignment: 9
-      pivot: {x: -0.00017577333, y: 0.5062994}
+        x: 0
+        y: 0
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c60c504cca1bfc650800000000000000
-      internalID: 6255413763022110828
+      spriteID: 3c7f86534da3d3df0800000000000000
+      internalID: -198938125430884413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HP Bar_1
+      name: Menu_1
       rect:
         serializedVersion: 2
         x: 96
-        y: 0
-        width: 96
-        height: 16
+        y: 2
+        width: 45
+        height: 13
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c392538500eeb5a20800000000000000
-      internalID: 3052294857720932668
+      spriteID: 004b89a07aae085e0800000000000000
+      internalID: -1909268238846872576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HP Bar_2
+      name: Menu_2
       rect:
         serializedVersion: 2
         x: 192
-        y: 0
-        width: 96
-        height: 16
+        y: 2
+        width: 86
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54b3d3e8cbed4e710800000000000000
-      internalID: 1721745858983967557
+      spriteID: 29a49b5e37aab2cf0800000000000000
+      internalID: -275939537401066862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HP Bar_3
+      name: Menu_3
       rect:
         serializedVersion: 2
         x: 288
-        y: 0
-        width: 96
-        height: 16
+        y: 2
+        width: 44
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a84b04e1bb4d5230800000000000000
-      internalID: 3629140102137727142
+      spriteID: 8900ae59783a46120800000000000000
+      internalID: 2406227903653740696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HP Bar_4
+      name: Menu_4
       rect:
         serializedVersion: 2
         x: 384
-        y: 0
-        width: 96
-        height: 16
+        y: 2
+        width: 24
+        height: 12
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0cd8913b3cad8f280800000000000000
-      internalID: -9009210520496403008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HP Bar_5
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 0
-        width: 96
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3bad0ce0bf22af4f0800000000000000
-      internalID: -794283922597815629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HP Bar_6
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 96
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8d0d17cbf11f76b40800000000000000
-      internalID: 5433576594053648600
+      spriteID: bc78c29cf8be693f0800000000000000
+      internalID: -894268473198475317
       vertices: []
       indices: 
       edges: []
@@ -288,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ef9c6c8b4468727409acafba43397db0
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -298,13 +248,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HP Bar_0: 6255413763022110828
-      HP Bar_1: 3052294857720932668
-      HP Bar_2: 1721745858983967557
-      HP Bar_3: 3629140102137727142
-      HP Bar_4: -9009210520496403008
-      HP Bar_5: -794283922597815629
-      HP Bar_6: 5433576594053648600
+      Menu_0: -198938125430884413
+      Menu_1: -1909268238846872576
+      Menu_2: -275939537401066862
+      Menu_3: 2406227903653740696
+      Menu_4: -894268473198475317
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
