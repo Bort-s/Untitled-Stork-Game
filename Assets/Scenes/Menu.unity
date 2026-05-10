@@ -398,6 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
   buttonIndex: 2
+  isActive: 1
 --- !u!1 &1235465244
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
   buttonIndex: 1
+  isActive: 0
 --- !u!1 &1551752398
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,6 +854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
   buttonIndex: 4
+  isActive: 1
 --- !u!1 &1777974166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,6 +1020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
   buttonIndex: 0
+  isActive: 1
 --- !u!1 &2146374239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,6 +1173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehavior
   buttonIndex: 3
+  isActive: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

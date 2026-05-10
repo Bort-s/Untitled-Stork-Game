@@ -23,9 +23,7 @@ public class HPBar : MonoBehaviour
         if (GameData.isDead)
         {
             OnDead();
-        }
-        
-        if (actualHealt != GameData.playerHealth && !decreasing)
+        } else if (actualHealt != GameData.playerHealth && !decreasing)
         {
             decreasing = true;
             actualHealt = actualHealt - 1f;

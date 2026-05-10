@@ -9,7 +9,7 @@ public class WallCloudDamage : MonoBehaviour
     private float interCooldownTime = 0.1f;
     private void OnTriggerStay2D(Collider2D other)
     {
-        if(!GameData.cooldown && !interCooldown)
+        if(GameData.playerCanTakeDamage && !interCooldown)
         {
            if (other.CompareTag("Player"))
             {

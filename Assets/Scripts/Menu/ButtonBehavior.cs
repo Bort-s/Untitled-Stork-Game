@@ -6,6 +6,7 @@ using Debug = UnityEngine.Debug;
 public class ButtonBehavior : MonoBehaviour
 {
     public int buttonIndex;
+    public bool isActive;
 
     private bool isPressed = false;
     private bool isHovering = false;
@@ -42,7 +43,7 @@ public class ButtonBehavior : MonoBehaviour
 
     void OnMouseUpAsButton()
     {
-        if (isReleased)
+        if (isReleased && isHovering && isActive)
         {
             switch (buttonIndex)
             {
@@ -77,17 +78,17 @@ public class ButtonBehavior : MonoBehaviour
 
     public void TutorialButton()
     {
-        SceneManager.LoadScene("Tutorial");
+        // SceneManager.LoadScene("Tutorial");
     }
 
     public void AchievementsButton()
     {
-        SceneManager.LoadScene("Achievements");
+        // Achievements
     }
 
     public void CreditsButton()
     {
-        SceneManager.LoadScene("Credits");
+        // Credits
     }
 
     public void ExitButton()
@@ -100,17 +101,24 @@ public class ButtonBehavior : MonoBehaviour
     }
     void Update()
     {
-        if (isPressed)
+        if (isActive)
         {
-            sprite.color = Color.gray;
-        }
-        else if (isHovering)
-        {
-            sprite.color = new Color(0.8f, 0.8f, 0.8f);
+            if (isPressed)
+            {
+                sprite.color = Color.gray;
+            }
+            else if (isHovering)
+            {
+                sprite.color = new Color(0.8f, 0.8f, 0.8f);
+            }
+            else
+            {
+                sprite.color = Color.white;
+            }
         }
         else
         {
-            sprite.color = Color.white;
+            sprite.color = Color.gray;
         }
     }
 }
