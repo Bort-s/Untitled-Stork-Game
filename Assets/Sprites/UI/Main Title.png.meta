@@ -1,22 +1,16 @@
 fileFormatVersion: 2
-guid: f7505edffe5d80048a15a78b30610a2f
+guid: c79861fff8e3a184b9e3872d890ecb21
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -198938125430884413
-    second: Menu_0
+      213: -4158213174130544709
+    second: Main Title_0
   - first:
-      213: -1909268238846872576
-    second: Menu_1
+      213: 7371647644702469391
+    second: Main Title_1
   - first:
-      213: -275939537401066862
-    second: Menu_2
-  - first:
-      213: 2406227903653740696
-    second: Menu_3
-  - first:
-      213: -894268473198475317
-    second: Menu_4
+      213: 7937451739754982124
+    second: Main Title_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menu_0
+      name: Main Title_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 25
-        height: 14
+        x: 93
+        y: 32
+        width: 201
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,96 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c7f86534da3d3df0800000000000000
-      internalID: -198938125430884413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu_1
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 3
-        width: 43
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 004b89a07aae085e0800000000000000
-      internalID: -1909268238846872576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu_2
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 3
-        width: 84
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 29a49b5e37aab2cf0800000000000000
-      internalID: -275939537401066862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu_3
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 3
-        width: 42
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8900ae59783a46120800000000000000
-      internalID: 2406227903653740696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu_4
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 3
-        width: 22
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc78c29cf8be693f0800000000000000
-      internalID: -894268473198475317
+      spriteID: bbf6997362f0b46c0800000000000000
+      internalID: -4158213174130544709
       vertices: []
       indices: 
       edges: []
@@ -238,7 +144,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a65533fdb712c2047a90aac5e1da72e2
+    spriteID: cbf1da572cfb21f45ac901662a7c1edf
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +154,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Menu_0: -198938125430884413
-      Menu_1: -1909268238846872576
-      Menu_2: -275939537401066862
-      Menu_3: 2406227903653740696
-      Menu_4: -894268473198475317
+      Main Title_0: -4158213174130544709
+      Main Title_1: 7371647644702469391
+      Main Title_2: 7937451739754982124
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

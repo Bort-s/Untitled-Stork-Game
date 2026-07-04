@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: f7505edffe5d80048a15a78b30610a2f
+guid: 331886ae975fe014192cd4a1ecebfb57
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -198938125430884413
-    second: Menu_0
+      213: 1746320494912707310
+    second: Clouds_mini_0
   - first:
-      213: -1909268238846872576
-    second: Menu_1
+      213: 2175949156088245596
+    second: Clouds_mini_1
   - first:
-      213: -275939537401066862
-    second: Menu_2
+      213: -557577871249470179
+    second: Clouds_mini_2
   - first:
-      213: 2406227903653740696
-    second: Menu_3
-  - first:
-      213: -894268473198475317
-    second: Menu_4
+      213: 522909620275695159
+    second: Clouds_mini_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menu_0
+      name: Clouds_mini_0
       rect:
         serializedVersion: 2
         x: 1
-        y: 1
-        width: 25
-        height: 14
+        y: 8
+        width: 46
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c7f86534da3d3df0800000000000000
-      internalID: -198938125430884413
+      spriteID: eea914bdc3d2c3810800000000000000
+      internalID: 1746320494912707310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menu_1
+      name: Clouds_mini_1
       rect:
         serializedVersion: 2
-        x: 97
-        y: 3
-        width: 43
-        height: 11
+        x: 64
+        y: 8
+        width: 48
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 004b89a07aae085e0800000000000000
-      internalID: -1909268238846872576
+      spriteID: c5d63f19a36823e10800000000000000
+      internalID: 2175949156088245596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menu_2
+      name: Clouds_mini_2
       rect:
         serializedVersion: 2
-        x: 193
-        y: 3
-        width: 84
-        height: 10
+        x: 128
+        y: 8
+        width: 48
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 29a49b5e37aab2cf0800000000000000
-      internalID: -275939537401066862
+      spriteID: d1d8e8951e51348f0800000000000000
+      internalID: -557577871249470179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menu_3
+      name: Clouds_mini_3
       rect:
         serializedVersion: 2
-        x: 289
-        y: 3
-        width: 42
-        height: 10
+        x: 192
+        y: 9
+        width: 48
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,30 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8900ae59783a46120800000000000000
-      internalID: 2406227903653740696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Menu_4
-      rect:
-        serializedVersion: 2
-        x: 385
-        y: 3
-        width: 22
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bc78c29cf8be693f0800000000000000
-      internalID: -894268473198475317
+      spriteID: 73eca26778fb14700800000000000000
+      internalID: 522909620275695159
       vertices: []
       indices: 
       edges: []
@@ -238,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a65533fdb712c2047a90aac5e1da72e2
+    spriteID: 1ace84078641ab14dbde10c1347202f2
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Menu_0: -198938125430884413
-      Menu_1: -1909268238846872576
-      Menu_2: -275939537401066862
-      Menu_3: 2406227903653740696
-      Menu_4: -894268473198475317
+      Clouds_mini_0: 1746320494912707310
+      Clouds_mini_1: 2175949156088245596
+      Clouds_mini_2: -557577871249470179
+      Clouds_mini_3: 522909620275695159
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

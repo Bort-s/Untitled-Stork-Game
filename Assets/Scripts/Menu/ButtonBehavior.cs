@@ -5,12 +5,12 @@ using Debug = UnityEngine.Debug;
 
 public class ButtonBehavior : MonoBehaviour
 {
+    public GameObject wall = null;
     public int buttonIndex;
     public bool isActive;
 
     private bool isPressed = false;
     private bool isHovering = false;
-    private bool isReleased = false;
 
     private SpriteRenderer sprite;
 
@@ -27,12 +27,10 @@ public class ButtonBehavior : MonoBehaviour
     void OnMouseDown()  
     {
         isPressed = true;
-        isReleased = false;
     }
 
     void OnMouseUp()   
     {
-        isReleased = true;
         isPressed = false;
     }
 
@@ -43,8 +41,9 @@ public class ButtonBehavior : MonoBehaviour
 
     void OnMouseUpAsButton()
     {
-        if (isReleased && isHovering && isActive)
+        if (isActive)
         {
+            Debug.Log("Pressed button: " + buttonIndex);
             switch (buttonIndex)
             {
                 case 0:
@@ -67,8 +66,6 @@ public class ButtonBehavior : MonoBehaviour
                     break;
             }
         }
-        isPressed = false;
-        isReleased = false;
     }
 
     public void PlayButton()
@@ -83,7 +80,7 @@ public class ButtonBehavior : MonoBehaviour
 
     public void AchievementsButton()
     {
-        // Achievements
+        
     }
 
     public void CreditsButton()
