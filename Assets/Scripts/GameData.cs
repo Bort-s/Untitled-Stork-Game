@@ -21,6 +21,9 @@ public class GameData : MonoBehaviour
     public static float maxGameProgress = 100f;
     float C = 1f;
 
+    // Game Over
+    public static bool launchGameOver = false;
+
     // Else..
     private bool onCoroutine = false;
 
@@ -43,30 +46,33 @@ public class GameData : MonoBehaviour
         deadMessage = false;
         gameCompletedMessage = false;
         playerCanTakeDamage = true;
+        launchGameOver = false;
     }
 
 
     private void Update()
     {
-        if (damageCooldown && playerCanTakeDamage)
+        if (damageCooldown && playerCanTakeDamage) 
         {
-            damageCooldown = false;
             playerCanTakeDamage = false;
             Debug.Log("Damage Cooldown active");
             StartCoroutine(CooldownTime());
         }
 
-        if (playerHealth <= 0f)
+        // The player dies
+        if (playerHealth <= 0f && !gameCompleted)
         {
             isDead = true;
+            playerCanTakeDamage = false;
             if (!deadMessage)
             {
                 Debug.Log("Player has died.");
                 deadMessage = true;
             }
+            StartCoroutine(DeathSequence());
         }
 
-        if (gameProgress < maxGameProgress && !onCoroutine)
+        if (gameProgress < maxGameProgress && !onCoroutine && !isDead)
         {
             StartCoroutine(GameProgression());
             if (gameProgress > 10f * C)
@@ -76,9 +82,10 @@ public class GameData : MonoBehaviour
             }
             onCoroutine = true;
         } 
-        else if (gameProgress >= maxGameProgress)
+        else if (gameProgress >= maxGameProgress )
         {
             gameCompleted = true;
+            playerCanTakeDamage = false;
             if (!gameCompletedMessage)
             {
                 Debug.Log("Game Completed!");
@@ -100,5 +107,11 @@ public class GameData : MonoBehaviour
         gameProgress += speed;
         yield return new WaitForSeconds(1f);
         onCoroutine = false;
+    }
+
+    private IEnumerator DeathSequence()
+    {
+        yield return new WaitForSeconds(2f);
+        launchGameOver = true;
     }
 }
