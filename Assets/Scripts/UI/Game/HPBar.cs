@@ -23,7 +23,8 @@ public class HPBar : MonoBehaviour
         if (GameData.isDead)
         {
             OnDead();
-        } else if (actualHealt != GameData.playerHealth && !decreasing)
+        } 
+        else if (actualHealt != GameData.playerHealth && !decreasing)
         {
             decreasing = true;
             actualHealt = actualHealt - 1f;
@@ -31,7 +32,7 @@ public class HPBar : MonoBehaviour
         }
     }
 
-    IEnumerator HPBarBehavior()
+    private IEnumerator HPBarBehavior()
     {
         Vector3 scale = HPBarObject.transform.localScale;
         scale.x = actualHealt * 0.01f;

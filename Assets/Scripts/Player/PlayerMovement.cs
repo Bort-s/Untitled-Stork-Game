@@ -27,33 +27,35 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
- 
+
     private void Update()
     {
-        if (Keyboard.current.wKey.isPressed)
-            verticalInput = 1f;
-        else if (Keyboard.current.sKey.isPressed)
-            verticalInput = -1f;
-        else
-            verticalInput = 0f;
+        if (!GameData.isDead && !GameData.gameCompleted)
+        {
+            if (Keyboard.current.wKey.isPressed)
+                verticalInput = 1f;
+            else if (Keyboard.current.sKey.isPressed)
+                verticalInput = -1f;
+            else
+                verticalInput = 0f;
 
-        if (Keyboard.current.dKey.isPressed && Keyboard.current.aKey.isPressed)
-        {
-            // Do nothing, both keys cancel each other out
+            if (Keyboard.current.dKey.isPressed && Keyboard.current.aKey.isPressed)
+            {
+                // Do nothing, both keys cancel each other out
+            }
+            else if (Keyboard.current.aKey.isPressed)
+            {
+                if (GameData.speed > 1f)
+                    GameData.speed -= acceleration;
+            }
+            else if (Keyboard.current.dKey.isPressed)
+            {
+                if (GameData.speed < maxSpeed)
+                    GameData.speed += acceleration;
+            }
         }
-        else if (Keyboard.current.aKey.isPressed)
-        {
-            if (GameData.speed > 1f) 
-                GameData.speed -= acceleration;
-        }
-        else if (Keyboard.current.dKey.isPressed)
-        {
-            if (GameData.speed < maxSpeed) 
-                GameData.speed += acceleration;
-        }
-
     }
- 
+
     private void FixedUpdate()
     {
         targetSpeed = verticalInput * maxVerticalSpeed;
@@ -64,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
             currentVerticalSpeed = 0f;
         else
             currentVerticalSpeed = Mathf.MoveTowards(currentVerticalSpeed, targetSpeed, verticalAcceleration * Time.fixedDeltaTime);
-        
+
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, currentVerticalSpeed);
     }
 
@@ -76,10 +78,10 @@ public class PlayerMovement : MonoBehaviour
     private void SnapToPixel()
     {
         Vector3 pos = transform.position;
- 
+
         pos.x = Mathf.Round(pos.x * pixelsPerUnit) / pixelsPerUnit;
         pos.y = Mathf.Round(pos.y * pixelsPerUnit) / pixelsPerUnit;
- 
+
         transform.position = pos;
     }
 }

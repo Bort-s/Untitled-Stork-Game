@@ -1,28 +1,43 @@
 using UnityEngine;
+using System.Collections;
+using Debug = UnityEngine.Debug;
 
 public class playerHealth : MonoBehaviour
 {
     // Health
-    public float timeToDecrease = 5f;
-    private float timer;
+    private float timeToDecrease = 5f;
+    private bool onCoroutine = false;
 
-    void Start()
-    {
-        timeToDecrease = GameData.maxGameProgress / 50f;
-    }
+    private bool deadMessage = false;
 
     void Update()
     {
-        if (GameData.playerCanTakeDamage)
+        if (GameData.playerHealth <= 0f && !GameData.gameCompleted)
         {
-            timer += Time.deltaTime;
-
-            if (timer >= timeToDecrease)
+            GameData.isDead = true;
+            GameData.playerCanTakeDamage = false;
+            if (!deadMessage)
             {
-                timer = 0f;
-                GameData.playerHealth -= 1f;
-                Debug.Log("New Player Health: " + GameData.playerHealth);
+                Debug.Log("Player has died.");
+                deadMessage = true;
             }
         }
+
+        if (!onCoroutine)
+        {
+            StartCoroutine(TimeDamage());
+        }
+    }
+
+    private IEnumerator TimeDamage()
+    {
+        onCoroutine = true;
+        if (GameData.playerCanTakeDamage)
+        {
+            GameData.playerHealth -= 1f;
+            Debug.Log("New Player Health: " + GameData.playerHealth);
+        }
+        yield return new WaitForSeconds(timeToDecrease);
+        onCoroutine = false;
     }
 }

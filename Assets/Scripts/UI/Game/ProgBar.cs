@@ -12,7 +12,7 @@ public class ProgBar : MonoBehaviour
 
     void Update()
     {
-        if (actualProgress < GameData.gameProgress && !increasing && !GameData.gameCompleted)
+        if (actualProgress < GameData.gameProgress && !increasing)
         {
             increasing = true;
             actualProgress = actualProgress + 1f;
@@ -20,15 +20,11 @@ public class ProgBar : MonoBehaviour
         }
     }
 
-    IEnumerator ProgressBarBehavior()
+    private IEnumerator ProgressBarBehavior()
     {
         Vector3 scale = progressBar.transform.localScale;
         scale.x = actualProgress * 0.01f;
         progressBar.transform.localScale = scale;
-        /*
-        Vector3 pos = progressBar.transform.localPosition;
-        pos.x = -1.06256f;
-        progressBar.transform.localPosition = pos;*/
         yield return new WaitForSeconds(velocidad);
         increasing = false;
     }

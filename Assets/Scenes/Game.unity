@@ -522,7 +522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ef4b1ea29d9b1469d4b5c4715d0383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerHealth
-  timeToDecrease: 3
 --- !u!60 &327619422
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -636,9 +635,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 327619414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4a26d1a7fcc4fa488e843a3e53d000f, type: 3}
+  m_Script: {fileID: 11500000, guid: e0c9c23078645464db49195ecc0270d7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerDash
+  m_EditorClassIdentifier: Assembly-CSharp::Shield
 --- !u!1001 &329535914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -707,6 +706,8 @@ GameObject:
   - component: {fileID: 336258521}
   - component: {fileID: 336258520}
   - component: {fileID: 336258523}
+  - component: {fileID: 336258524}
+  - component: {fileID: 336258525}
   m_Layer: 0
   m_Name: HP Bar_1
   m_TagString: Untagged
@@ -802,6 +803,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HPBar
   HPBarObject: {fileID: 1155586195}
+--- !u!95 &336258524
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336258519}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef92a32e3dcf2a844b45c7ceb58adb76, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &336258525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336258519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac10caa33bfaa14e896e20cc3f27be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HPBarAnim
 --- !u!4 &367042047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7922156644813549150, guid: 0e4eaf7db98576045b46c6275de3edf2, type: 3}
@@ -823,9 +858,10 @@ GameObject:
   - component: {fileID: 391086129}
   - component: {fileID: 391086128}
   - component: {fileID: 391086130}
-  - component: {fileID: 391086131}
   - component: {fileID: 391086132}
   - component: {fileID: 391086133}
+  - component: {fileID: 391086135}
+  - component: {fileID: 391086134}
   m_Layer: 0
   m_Name: sky_background_0
   m_TagString: Untagged
@@ -924,18 +960,6 @@ MonoBehaviour:
   - {fileID: 2699160067904612811, guid: 9a349db1a4774924abfe578fe99075b1, type: 3}
   - {fileID: 4403043575064071633, guid: 1e867ec4629c26f489966d3552245989, type: 3}
   - {fileID: 270384179575542102, guid: 5f32b9fd4e86c4b44b4c775322a3c8aa, type: 3}
---- !u!114 &391086131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391086127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d77d05fbfa37f114ba29819430e2b36d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameData
 --- !u!114 &391086132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,6 +1006,30 @@ MonoBehaviour:
   - {fileID: 3652830265910599408, guid: 566c73b6c6c5338478d8334d5306d0b2, type: 3}
   yAxisSpawn: 2.89
   isUp: 1
+--- !u!114 &391086134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391086127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c225c0716d719e1498b3a36dd4d3cd68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CloudCooldown
+--- !u!114 &391086135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391086127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4b77d4e4725f84439c5a5939d9066af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SetGameData
 --- !u!1001 &419101336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1910,6 +1958,7 @@ GameObject:
   - component: {fileID: 1142797047}
   - component: {fileID: 1142797046}
   - component: {fileID: 1142797048}
+  - component: {fileID: 1142797049}
   m_Layer: 0
   m_Name: ProgBar_0
   m_TagString: Untagged
@@ -2005,6 +2054,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProgBar
   progressBar: {fileID: 1725825459}
+--- !u!114 &1142797049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142797045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689c82829080ffa4d947e9c3448aa3c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameProgression
 --- !u!1 &1155586195
 GameObject:
   m_ObjectHideFlags: 0

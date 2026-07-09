@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using Debug = UnityEngine.Debug;
 using UnityEngine.SceneManagement;
 
 
@@ -6,15 +8,29 @@ public class GameOverWall : MonoBehaviour
 {
     private float wallSpeed = 11f;
     private Vector3? wallTarget = null;
+    private bool wallActivated = false;
+
+    private float timeBeforeWall = 2f;
+
     void Update()
     {
-        if (GameData.launchGameOver)
+        if (!wallActivated && GameData.isDead)
         {
-            wallTarget = new Vector3(0f, 0f, 0f);
-            transform.position = Vector3.MoveTowards(transform.position, wallTarget.Value, wallSpeed * Time.deltaTime);
-
-            if (Vector3.Distance(transform.position, wallTarget.Value) < 0.001f)
-                SceneManager.LoadScene("GameOver");
+            wallActivated = true;
+            StartCoroutine(LaunchWall());
         }
+    }
+
+
+    private IEnumerator LaunchWall()
+    {
+        yield return new WaitForSeconds(timeBeforeWall);
+        wallTarget = Vector3.zero;
+        while (Vector3.Distance(transform.position, wallTarget.Value) > 0.001f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, wallTarget.Value, wallSpeed * Time.deltaTime);
+            yield return null;
+        }
+        SceneManager.LoadScene("GameOver");
     }
 }

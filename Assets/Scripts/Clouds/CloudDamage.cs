@@ -13,13 +13,9 @@ public class CloudDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(!GameData.damageCooldown && GameData.playerCanTakeDamage)
+        if (!GameData.onCooldown && other.CompareTag("Player"))
         {
-           if (other.CompareTag("Player"))
-            {
-                GameData.playerHealth -= 10f;
-                GameData.damageCooldown = true;
-            }
+            GameData.onCooldown = true;
             DestroyCloud();
         }
     }

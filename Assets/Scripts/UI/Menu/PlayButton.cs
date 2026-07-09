@@ -7,13 +7,9 @@ public class PlayButton : MonoBehaviour
     private float wallSpeed = 11f;
     private Vector3? wallTarget;
 
-    private void OnMouseUpAsButton()
+    void awake()
     {
-        if (MenuData.isMenuActive)
-        {
-            Debug.Log("Pressed button: Play");
-            wallTarget = new Vector3(0f, 0f, 0f);
-        }
+        Application.targetFrameRate = 60;
     }
 
     void Update()
@@ -24,6 +20,15 @@ public class PlayButton : MonoBehaviour
 
             if (Vector3.Distance(gameWall.transform.position, wallTarget.Value) < 0.001f)
                 SceneManager.LoadScene("Game");
+        }
+    }
+
+    private void OnMouseUpAsButton()
+    {
+        if (MenuData.isMenuActive)
+        {
+            Debug.Log("Pressed button: Play");
+            wallTarget = new Vector3(0f, 0f, 0f);
         }
     }
 }
