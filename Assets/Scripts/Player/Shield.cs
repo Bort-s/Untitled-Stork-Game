@@ -6,13 +6,10 @@ using UnityEngine.InputSystem;
 
 public class Shield : MonoBehaviour
 {
-    private bool onCooldown = false;
-    private float shieldCooldown = 5f;
-    private float shieldDuration = 3f;
 
     void Update()
     {
-        if (Keyboard.current.eKey.isPressed && !GameData.isDead && !GameData.gameCompleted && !GameData.onShield && !onCooldown)
+        if (Keyboard.current.eKey.isPressed && !GameData.isDead && !GameData.gameCompleted && !GameData.onShield && !GameData.onShieldCooldown)
         {
             StartCoroutine(ShieldActivated());
         }
@@ -23,7 +20,9 @@ public class Shield : MonoBehaviour
         Debug.Log("Shield on");
         GameData.onShield = true;
         GameData.playerCanTakeDamage = false;
-        yield return new WaitForSeconds(shieldDuration);
+
+        yield return new WaitForSeconds(GameDifficulty.shieldDuration);
+        
         GameData.onShield = false;
         if (!GameData.isDead && !GameData.gameCompleted)
             GameData.playerCanTakeDamage = true;
@@ -33,9 +32,9 @@ public class Shield : MonoBehaviour
 
     private IEnumerator ShieldCooldown()
     {
-        onCooldown = true;
-        yield return new WaitForSeconds(shieldCooldown);
-        onCooldown = false;
+        GameData.onShieldCooldown = true;
+        yield return new WaitForSeconds(GameDifficulty.shieldCooldown);
+        GameData.onShieldCooldown = false;
         Debug.Log("Shield Cooldown terminated");
     }
 }

@@ -6,7 +6,6 @@ using Debug = UnityEngine.Debug;
 public class WallCloudDamage : MonoBehaviour
 {
     private bool interCooldown = false;
-    private float interCooldownTime = 0.1f;
     
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -21,7 +20,7 @@ public class WallCloudDamage : MonoBehaviour
     {
         GameData.playerHealth -= 1f;
         Debug.Log("New Player Health: " + GameData.playerHealth);
-        yield return new WaitForSeconds(interCooldownTime);
+        yield return new WaitForSeconds(GameDifficulty.wallCloudHitCooldown);
         interCooldown = false;
     }
 }

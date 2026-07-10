@@ -7,7 +7,7 @@ public class HPBar : MonoBehaviour
 {
     private Animator animator;
 
-    private float velocidad = 0.008f;
+    private float speedBar = 0.008f;
     private float actualHealt = 100f;
     private bool decreasing = false;
 
@@ -40,7 +40,7 @@ public class HPBar : MonoBehaviour
         Vector3 pos = HPBarObject.transform.localPosition;
         pos.x = -1.06256f;
         HPBarObject.transform.localPosition = pos;
-        yield return new WaitForSeconds(velocidad);
+        yield return new WaitForSeconds(speedBar);
         decreasing = false;
     }
 

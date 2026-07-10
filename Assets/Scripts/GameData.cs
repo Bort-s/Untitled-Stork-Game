@@ -6,10 +6,11 @@ public class GameData : MonoBehaviour
 {
     // General
     public static float speed;
+    public static bool onCloudCooldown;
 
-    // Times
-    public static bool onCooldown;
+    // Shield
     public static bool onShield;
+    public static bool onShieldCooldown;
 
     // Health
     public static float playerHealth;

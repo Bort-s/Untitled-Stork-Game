@@ -4,13 +4,13 @@ using Debug = UnityEngine.Debug;
 
 public class CloudCooldown : MonoBehaviour
 {
-    private float cooldownTime = 3f;
     void Update()
     {
-        if (GameData.onCooldown && GameData.playerCanTakeDamage)
+        if (GameData.onCloudCooldown && GameData.playerCanTakeDamage && !GameData.onShield)
         {
-            GameData.playerHealth -= 7f;
+            GameData.playerHealth -= GameDifficulty.cloudHitDamage;
             GameData.playerCanTakeDamage = false;
+            GameData.onCloudCooldown = false;
             StartCoroutine(CooldownTime());
         }
     }
@@ -18,10 +18,9 @@ public class CloudCooldown : MonoBehaviour
     private IEnumerator CooldownTime()
     {
         Debug.Log("Damage Cooldown active");
-        yield return new WaitForSeconds(cooldownTime);
+        yield return new WaitForSeconds(GameDifficulty.cloudHitCooldown);
         if (!GameData.onShield)
             GameData.playerCanTakeDamage = true;
-        GameData.onCooldown = false;
         Debug.Log("Damage Cooldown finished");
     }
 }

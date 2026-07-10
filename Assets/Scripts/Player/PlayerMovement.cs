@@ -47,11 +47,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (GameData.speed > 1f)
                     GameData.speed -= acceleration;
+                    // Debug.Log("Speed: " + GameData.speed);
             }
             else if (Keyboard.current.dKey.isPressed)
             {
                 if (GameData.speed < maxSpeed)
                     GameData.speed += acceleration;
+                    // Debug.Log("Speed: " + GameData.speed);
             }
         }
     }

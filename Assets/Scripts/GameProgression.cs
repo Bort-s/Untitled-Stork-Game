@@ -5,23 +5,16 @@ using System.Collections;
 public class GameProgression : MonoBehaviour
 {
     private bool gameCompletedMessage = false;
-    public static float maxGameProgress = 100f;
     private bool onCoroutine = false;
-    float C = 1f;
 
     void Update()
     {
-        if (GameData.gameProgress < maxGameProgress && !onCoroutine && !GameData.isDead)
+        if (GameData.gameProgress < GameDifficulty.maxGameProgress && !onCoroutine && !GameData.isDead)
         {
             StartCoroutine(Progression());
-            if (GameData.gameProgress > 10f * C)
-            {
-                Debug.Log("Game Progress: " + GameData.gameProgress);
-                C += 10f;
-            }
             onCoroutine = true;
         }
-        else if (GameData.gameProgress >= maxGameProgress)
+        else if (GameData.gameProgress >= GameDifficulty.maxGameProgress)
         {
             GameData.gameCompleted = true;
             GameData.playerCanTakeDamage = false;
@@ -36,6 +29,7 @@ public class GameProgression : MonoBehaviour
     private IEnumerator Progression()
     {
         GameData.gameProgress += GameData.speed;
+        Debug.Log("Game Progress: " + GameData.gameProgress);
         yield return new WaitForSeconds(1f);
         onCoroutine = false;
     }

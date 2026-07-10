@@ -5,17 +5,19 @@ using Debug = UnityEngine.Debug;
 public class ProgBar : MonoBehaviour
 {
     private float velocidad = 0.008f;
-    private float actualProgress = 0.01f;
+    private float progressPercentage;
     private bool increasing = false;
 
     public GameObject progressBar;
 
     void Update()
     {
-        if (actualProgress < GameData.gameProgress && !increasing)
+        progressPercentage = GameData.gameProgress / GameDifficulty.maxGameProgress;
+
+        if (GameData.gameProgress != 0 && !increasing)
         {
             increasing = true;
-            actualProgress = actualProgress + 1f;
+            
             StartCoroutine(ProgressBarBehavior());
         }
     }
@@ -23,7 +25,7 @@ public class ProgBar : MonoBehaviour
     private IEnumerator ProgressBarBehavior()
     {
         Vector3 scale = progressBar.transform.localScale;
-        scale.x = actualProgress * 0.01f;
+        scale.x = progressPercentage;
         progressBar.transform.localScale = scale;
         yield return new WaitForSeconds(velocidad);
         increasing = false;

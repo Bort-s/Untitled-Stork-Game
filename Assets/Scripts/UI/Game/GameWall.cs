@@ -5,6 +5,12 @@ public class GameWall : MonoBehaviour
     private float wallSpeed = 11f;
     private Vector3? wallTarget = null;
 
+    void Awake()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = true;
+    }
+
     void Start()
     {
         wallTarget = new Vector3(14f, 0f, 0f);

@@ -5,10 +5,16 @@ using Debug = UnityEngine.Debug;
 public class playerHealth : MonoBehaviour
 {
     // Health
-    private float timeToDecrease = 5f;
-    private bool onCoroutine = false;
+    private float timeToDecrease;
+    private float startTime;
 
+    private bool onCoroutine = false;
     private bool deadMessage = false;
+
+    void Start()
+    {
+        startTime = Time.time;
+    }
 
     void Update()
     {
@@ -25,6 +31,7 @@ public class playerHealth : MonoBehaviour
 
         if (!onCoroutine)
         {
+            timeToDecrease = GetTimeToDecrease(Time.time - startTime);
             StartCoroutine(TimeDamage());
         }
     }
@@ -39,5 +46,10 @@ public class playerHealth : MonoBehaviour
         }
         yield return new WaitForSeconds(timeToDecrease);
         onCoroutine = false;
+    }
+
+    private float GetTimeToDecrease(float time)
+    {
+        return Mathf.Round((-0.025f * time) + 6.5f);
     }
 }
