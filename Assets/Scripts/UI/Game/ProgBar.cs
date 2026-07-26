@@ -20,6 +20,12 @@ public class ProgBar : MonoBehaviour
             
             StartCoroutine(ProgressBarBehavior());
         }
+
+        if (GameData.gameCompleted)
+        {
+            Vector3 newPosition = new Vector3(transform.position.x, -4f, 0f);
+            transform.position = Vector3.MoveTowards(transform.position, newPosition, 4f * Time.deltaTime);
+        }
     }
 
     private IEnumerator ProgressBarBehavior()

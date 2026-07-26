@@ -7,7 +7,7 @@ public class GameDifficulty : MonoBehaviour
     public static float cloudHitCooldown = 3f;
 
     // Wall Clouds
-    public static float wallCloudHitCooldown = 1f;
+    public static float wallCloudHitCooldown = 0.2f;
 
     // Game
     public static float maxGameProgress = 200f;

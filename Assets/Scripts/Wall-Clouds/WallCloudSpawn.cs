@@ -9,14 +9,37 @@ public class WallCloudSpawn : MonoBehaviour
 {
     public GameObject[] wallCloud;
     private float xAxisSpawn = 7f;
-    public float yAxisSpawn;
+    private float yAxisSpawn = -2.89f;
     private float spawnTime = 0.3f;
     private bool spawn = true;
 
     public bool isUp;
 
-    private void Update()
+    private float decreaseF = 0.3f;
+
+    void Start()
     {
+        if (isUp)
+            yAxisSpawn = 2.89f;
+    }
+
+    void Update()
+    {
+        if (GameData.gameCompleted)
+        {
+            if (isUp)
+            {
+                yAxisSpawn += Time.deltaTime * decreaseF;
+            }
+            else
+            {
+                yAxisSpawn -= Time.deltaTime * decreaseF;
+            }
+        }
+
+        if (yAxisSpawn > 4 || yAxisSpawn < -4)
+            spawn = false;
+            
         if (spawn)
         {
             spawn = false;
@@ -30,9 +53,7 @@ public class WallCloudSpawn : MonoBehaviour
         Vector3 spawnPos = new Vector3(xAxisSpawn, yAxisSpawn, 0f);
         GameObject spawnedCloud = Instantiate(wallCloud[randomWallCloud], spawnPos, Quaternion.identity);
         if (isUp)
-        {
             spawnedCloud.transform.rotation = Quaternion.Euler(0, 0, 180);
-        }
         yield return new WaitForSeconds(spawnTime / GameData.speed);
         spawn = true;
     }

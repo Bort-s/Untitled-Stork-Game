@@ -2,6 +2,7 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Debug = UnityEngine.Debug;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float verticalInput;
     private float pixelsPerUnit = 32f;
+
+    private float playerDeathAnimDuration = 1.5f;
+    private bool hasBeenLaunched = false;
 
     // Speed Control
 
@@ -46,15 +50,28 @@ public class PlayerMovement : MonoBehaviour
             else if (Keyboard.current.aKey.isPressed)
             {
                 if (GameData.speed > 1f)
+                {
                     GameData.speed -= acceleration;
                     // Debug.Log("Speed: " + GameData.speed);
+                }
             }
             else if (Keyboard.current.dKey.isPressed)
             {
                 if (GameData.speed < maxSpeed)
+                {
                     GameData.speed += acceleration;
                     // Debug.Log("Speed: " + GameData.speed);
+                }
             }
+        }
+        else if (GameData.isDead && !hasBeenLaunched)
+        {
+            StartCoroutine(OnDeath());
+            hasBeenLaunched = true;
+        }
+        else if (GameData.gameCompleted)
+        {
+            verticalInput = 0f;
         }
     }
 
@@ -85,5 +102,12 @@ public class PlayerMovement : MonoBehaviour
         pos.y = Mathf.Round(pos.y * pixelsPerUnit) / pixelsPerUnit;
 
         transform.position = pos;
+    }
+
+    private IEnumerator OnDeath()
+    {
+        verticalInput = 0f;
+        yield return new WaitForSeconds(playerDeathAnimDuration);
+        verticalInput = -1f;
     }
 }

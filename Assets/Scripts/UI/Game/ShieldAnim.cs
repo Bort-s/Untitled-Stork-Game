@@ -21,7 +21,7 @@ public class ShieldAnim : MonoBehaviour
 
     void Update()
     {
-        if(GameData.onShield && !hasBeenTriggered)
+        if (GameData.onShield && !hasBeenTriggered)
         {
             hasBeenTriggered = true;
             StartCoroutine(StartAnimator());
@@ -34,6 +34,12 @@ public class ShieldAnim : MonoBehaviour
         else
         {
             spriteRenderer.sprite = Normal;
+        }
+
+        if (GameData.gameCompleted)
+        {
+            Vector3 newPosition = new Vector3(transform.position.x, 4f, 0f);
+            transform.position = Vector3.MoveTowards(transform.position, newPosition, 4f * Time.deltaTime);
         }
     }
 

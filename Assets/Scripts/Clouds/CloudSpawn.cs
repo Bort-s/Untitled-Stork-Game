@@ -11,17 +11,9 @@ public class CloudSpawn : MonoBehaviour
     private float spawnRangeY = 2f;
     private bool spawn = true;
 
-    private float timeToSpawn = 1f;
-
     private void Update()
     {
-        if (timeToSpawn > 0f)
-        {
-            timeToSpawn -= Time.deltaTime;
-            return;
-        }
-
-        if (spawn)
+        if (spawn && !GameData.gameCompleted)
         {
             spawn = false;
             StartCoroutine(SpawnCloud());

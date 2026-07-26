@@ -9,7 +9,7 @@ public class playerHealth : MonoBehaviour
     private float startTime;
 
     private bool onCoroutine = false;
-    private bool deadMessage = false;
+    private bool deathMessage = false;
 
     void Start()
     {
@@ -22,10 +22,10 @@ public class playerHealth : MonoBehaviour
         {
             GameData.isDead = true;
             GameData.playerCanTakeDamage = false;
-            if (!deadMessage)
+            if (!deathMessage)
             {
                 Debug.Log("Player has died.");
-                deadMessage = true;
+                deathMessage = true;
             }
         }
 

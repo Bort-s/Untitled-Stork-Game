@@ -22,13 +22,19 @@ public class HPBar : MonoBehaviour
     {
         if (GameData.isDead)
         {
-            OnDead();
+            OnDeath();
         } 
         else if (actualHealt != GameData.playerHealth && !decreasing)
         {
             decreasing = true;
             actualHealt = actualHealt - 1f;
             StartCoroutine(HPBarBehavior());
+        }
+
+        if (GameData.gameCompleted)
+        {
+            Vector3 newPosition = new Vector3(transform.position.x, 4f, 0f);
+            transform.position = Vector3.MoveTowards(transform.position, newPosition, 4f * Time.deltaTime);
         }
     }
 
@@ -38,13 +44,13 @@ public class HPBar : MonoBehaviour
         scale.x = actualHealt * 0.01f;
         HPBarObject.transform.localScale = scale;
         Vector3 pos = HPBarObject.transform.localPosition;
-        pos.x = -1.06256f;
+        // pos.x = -1.06256f;
         HPBarObject.transform.localPosition = pos;
         yield return new WaitForSeconds(speedBar);
         decreasing = false;
     }
 
-    void OnDead()
+    void OnDeath()
     {
         Destroy(HPBarObject);
     }
