@@ -10,12 +10,13 @@ public class WallCloudSpawn : MonoBehaviour
     public GameObject[] wallCloud;
     private float xAxisSpawn = 7f;
     private float yAxisSpawn = -2.89f;
-    private float spawnTime = 0.3f;
-    private bool spawn = true;
 
     public bool isUp;
 
     private float decreaseF = 0.3f;
+
+    private GameObject lastSpawnedCloud;
+    private float lastCloudWidth = 0f;
 
     void Start()
     {
@@ -38,23 +39,42 @@ public class WallCloudSpawn : MonoBehaviour
         }
 
         if (yAxisSpawn > 4 || yAxisSpawn < -4)
-            spawn = false;
-            
-        if (spawn)
+            return;
+
+        if (lastSpawnedCloud == null || (xAxisSpawn - lastSpawnedCloud.transform.position.x) >= lastCloudWidth)
         {
-            spawn = false;
-            StartCoroutine(SpawnWallCloud());
+            SpawnWallCloud();
         }
     }
 
-    private IEnumerator SpawnWallCloud()
+    private void SpawnWallCloud()
     {
-        int randomWallCloud = Random.Range(0, 8);
-        Vector3 spawnPos = new Vector3(xAxisSpawn, yAxisSpawn, 0f);
-        GameObject spawnedCloud = Instantiate(wallCloud[randomWallCloud], spawnPos, Quaternion.identity);
+        int randomWallCloud = Random.Range(0, wallCloud.Length); 
+        
+        float spawnX;
+
+        if (lastSpawnedCloud == null)
+        {
+            spawnX = xAxisSpawn;
+        }
+        else
+        {
+            spawnX = lastSpawnedCloud.transform.position.x + lastCloudWidth;
+        }
+
+        Vector3 spawnPos = new Vector3(spawnX, yAxisSpawn, 0f);
+        
+        lastSpawnedCloud = Instantiate(wallCloud[randomWallCloud], spawnPos, Quaternion.identity);
+        
         if (isUp)
-            spawnedCloud.transform.rotation = Quaternion.Euler(0, 0, 180);
-        yield return new WaitForSeconds(spawnTime / GameData.speed);
-        spawn = true;
+        {
+            lastSpawnedCloud.transform.rotation = Quaternion.Euler(0, 0, 180);
+        }
+        
+        SpriteRenderer sr = lastSpawnedCloud.GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            lastCloudWidth = sr.bounds.size.x;
+        }
     }
 }

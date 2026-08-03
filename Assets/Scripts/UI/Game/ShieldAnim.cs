@@ -13,7 +13,7 @@ public class ShieldAnim : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    void Start()
+    void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();

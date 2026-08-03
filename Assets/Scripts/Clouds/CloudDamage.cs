@@ -5,28 +5,34 @@ using System.Collections;
 public class CloudDamage : MonoBehaviour
 {
     private SpriteRenderer sprite;
+    private bool cloudDestroyed = false;
 
     private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Player"))
+        if (!cloudDestroyed)
         {
-            if (GameData.playerCanTakeDamage)
+            if (collision.CompareTag("Player") && collision is PolygonCollider2D)
             {
-                GameData.onCloudCooldown = true;
-                DestroyCloud();
-            }
-            else if (GameData.onShield)
-            {
-                DestroyCloud();
+                if (GameData.playerCanTakeDamage && !GameData.onShield)
+                {
+                    GameData.playerHealth -= GameDifficulty.cloudHitDamage;
+                    GameData.launchCloudCooldown = true;
+
+                    cloudDestroyed = true;
+                    DestroyCloud();
+                }
+                else if (GameData.onShield)
+                {
+                    cloudDestroyed = true;
+                    DestroyCloud();
+                }
             }
         }
-
-
     }
 
     private void DestroyCloud()

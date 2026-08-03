@@ -26,6 +26,7 @@ public class MenuButton : MonoBehaviour
         if (MenuData.isMenuActive)
         {
             Debug.Log("Pressed button: Menu");
+            MenuData.isMenuActive = false;
             wallTarget = new Vector3(0f, 0f, 0f);
         }
     }

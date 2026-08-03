@@ -6,12 +6,21 @@ public class CloudCooldown : MonoBehaviour
 {
     void Update()
     {
-        if (GameData.onCloudCooldown && GameData.playerCanTakeDamage && !GameData.onShield)
+        if (GameData.launchCloudCooldown)
         {
-            GameData.playerHealth -= GameDifficulty.cloudHitDamage;
-            GameData.playerCanTakeDamage = false;
-            GameData.onCloudCooldown = false;
+            GameData.launchCloudCooldown = false;
+            GameData.onCloudCooldown = true;
             StartCoroutine(CooldownTime());
+        }
+
+        if (GameData.onCloudCooldown)
+        {
+            GameData.playerCanTakeDamage = false;
+        }
+
+        if (GameData.onShield)
+        {
+            GameData.onCloudCooldown = false;
         }
     }
 
@@ -22,5 +31,6 @@ public class CloudCooldown : MonoBehaviour
         if (!GameData.onShield)
             GameData.playerCanTakeDamage = true;
         Debug.Log("Damage Cooldown finished");
+        GameData.onCloudCooldown = false;
     }
 }

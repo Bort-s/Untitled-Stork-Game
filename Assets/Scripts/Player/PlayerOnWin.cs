@@ -8,7 +8,7 @@ public class PlayerOnWin : MonoBehaviour
     private Vector3[] playerTarget = 
     {
         new Vector3(-2f, 2f, 0f),
-        new Vector3(0f, 2f, 0f),
+        new Vector3(-0.55f, 2f, 0f),
         new Vector3(7f, 2f, 0f),
     };
 
@@ -40,13 +40,18 @@ public class PlayerOnWin : MonoBehaviour
             }
 
             transform.position = Vector3.MoveTowards(transform.position, playerTarget[index], GameData.speed * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, playerTarget[2]) < 0.001f)
+            {
+                GameData.launchWall = true;
+            }
         }
     }
 
     private IEnumerator WinAnim()
     {
         index = 0;
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(8f);
         index = 1;
         yield return new WaitForSeconds(4f);
         GameData.speed = 4f;

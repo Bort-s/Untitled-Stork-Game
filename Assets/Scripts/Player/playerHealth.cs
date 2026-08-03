@@ -18,6 +18,11 @@ public class playerHealth : MonoBehaviour
 
     void Update()
     {
+        if (!GameData.gameCompleted)
+        {
+            GameData.time = Time.time - startTime;
+        }
+        
         if (GameData.playerHealth <= 0f && !GameData.gameCompleted)
         {
             GameData.isDead = true;
@@ -31,7 +36,7 @@ public class playerHealth : MonoBehaviour
 
         if (!onCoroutine)
         {
-            timeToDecrease = GetTimeToDecrease(Time.time - startTime);
+            timeToDecrease = GetTimeToDecrease(GameData.time);
             StartCoroutine(TimeDamage());
         }
     }
