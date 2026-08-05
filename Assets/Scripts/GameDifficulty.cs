@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameDifficulty : MonoBehaviour
 {
     // Clouds
-    public static float distanceBetweenClouds = 6f;
+    public static float distanceBetweenClouds = 5f;
     public static float cloudHitDamage = 15f;
     public static float cloudHitCooldown = 3f;
 

@@ -9,17 +9,13 @@ public class WinData : MonoBehaviour
     public static float time;
     private void Awake() 
     {
-        score = 0f;
-        stars = 0;
-        time = 0f;
+        score = GameData.playerHealth;
+        stars = Mathf.CeilToInt(score/20);
+        time = GameData.time;
     }
 
     private void Start()
     {
-        score = GameData.playerHealth;
-        stars = Mathf.CeilToInt(score/20);
-        time = GameData.time;
-
         Debug.Log("Score: " + score);
         Debug.Log("Stars: " + stars);
         Debug.Log("Time: " + time);

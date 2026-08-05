@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Speed Control
 
-    private float acceleration = 0.03f;
+    private float acceleration = 1.8f;
     private float maxSpeed = 5f;
 
 
@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (GameData.speed > 1f)
                 {
-                    GameData.speed -= acceleration;
+                    GameData.speed -= acceleration * Time.deltaTime;
                     // Debug.Log("Speed: " + GameData.speed);
                 }
             }
@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (GameData.speed < maxSpeed)
                 {
-                    GameData.speed += acceleration;
+                    GameData.speed += acceleration * Time.deltaTime;
                     // Debug.Log("Speed: " + GameData.speed);
                 }
             }

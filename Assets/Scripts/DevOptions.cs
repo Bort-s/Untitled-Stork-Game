@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class DevOptions : MonoBehaviour
 {
-    public bool noDamage = false;
-    public bool instantDeath = false;
-    public bool instantWin = false;
+    [SerializeField] private bool noDamage = false;
+    [SerializeField] private bool instantDeath = false;
+    [SerializeField] private bool instantWin = false;
 
     void Start()
     {

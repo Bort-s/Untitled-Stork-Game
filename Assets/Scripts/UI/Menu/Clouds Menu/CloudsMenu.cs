@@ -1,7 +1,6 @@
 using System.Diagnostics;
 using System.Collections;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 
 public class CloudsMenu : MonoBehaviour
 {

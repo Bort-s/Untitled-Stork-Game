@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ButtonState : MonoBehaviour
 {
-    public bool isActive;
+    [SerializeField] private bool isActive;
     private bool isPressed = false;
     private bool isHovering = false;
 

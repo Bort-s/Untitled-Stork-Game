@@ -3,7 +3,7 @@ using Debug = UnityEngine.Debug;
 using UnityEngine.SceneManagement;
 public class MenuButton : MonoBehaviour
 {
-    public GameObject menuWall;
+    [SerializeField] private GameObject menuWall;
     private float wallSpeed = 11f;
     private Vector3? wallTarget;
 
