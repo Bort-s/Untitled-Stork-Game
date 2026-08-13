@@ -3,7 +3,10 @@ using System.Collections;
 
 public class PlayerOnWin : MonoBehaviour
 {
-    private float acceleration = 0.03f;
+    private Animator animator;
+    private int index = 0;
+    private bool hasStarted = false;
+    private float acceleration = 1.8f;
 
     private Vector3[] playerTarget = 
     {
@@ -12,10 +15,10 @@ public class PlayerOnWin : MonoBehaviour
         new Vector3(7f, 2f, 0f),
     };
 
-    private int index = 0;
-
-
-    private bool hasStarted = false;
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -25,11 +28,11 @@ public class PlayerOnWin : MonoBehaviour
             {
                 if (GameData.speed > 2.1f)
                 {
-                    GameData.speed -= acceleration;
+                    GameData.speed -= acceleration * Time.deltaTime;
                 }
                 else if (GameData.speed < 1.9f)
                 {
-                    GameData.speed += acceleration;
+                    GameData.speed += acceleration * Time.deltaTime;
                 }
             }
 
@@ -53,7 +56,13 @@ public class PlayerOnWin : MonoBehaviour
         index = 0;
         yield return new WaitForSeconds(8f);
         index = 1;
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2f);
+
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        float actualTime = stateInfo.normalizedTime % 1f;
+        animator.Play("StorkVariation", 0, actualTime);
+        
+        yield return new WaitForSeconds(2f);
         GameData.speed = 4f;
         index = 2;
     }

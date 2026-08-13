@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: f7505edffe5d80048a15a78b30610a2f
+guid: ddf06e2e90107a64284fbc3aa9fd55b3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -198938125430884413
-    second: Menu_0
+      213: -7952709438160490669
+    second: Stroke-player-Alt_0
   - first:
-      213: -1909268238846872576
-    second: Menu_1
+      213: 7867319040026112633
+    second: Stroke-player-Alt_1
   - first:
-      213: -275939537401066862
-    second: Menu_2
+      213: 2119052117994111548
+    second: Stroke-player-Alt_2
   - first:
-      213: 2406227903653740696
-    second: Menu_3
+      213: 7970460885011024558
+    second: Stroke-player-Alt_3
   - first:
-      213: -894268473198475317
-    second: Menu_4
+      213: 5229229580090549256
+    second: Stroke-player-Alt_4
+  - first:
+      213: -6127728443832057301
+    second: Stroke-player-Alt_5
+  - first:
+      213: -5330662221756878418
+    second: Stroke-player-Alt_6
+  - first:
+      213: 1347540607721241146
+    second: Stroke-player-Alt_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menu_0
+      name: Stroke-player-Alt_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 25
-        height: 14
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c7f86534da3d3df0800000000000000
-      internalID: -198938125430884413
+      spriteID: 35f2c88b6ec42a190800000000000000
+      internalID: -7952709438160490669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menu_1
+      name: Stroke-player-Alt_1
       rect:
         serializedVersion: 2
-        x: 97
-        y: 3
-        width: 43
-        height: 11
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 004b89a07aae085e0800000000000000
-      internalID: -1909268238846872576
+      spriteID: 9727c6bebf45e2d60800000000000000
+      internalID: 7867319040026112633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menu_2
+      name: Stroke-player-Alt_2
       rect:
         serializedVersion: 2
-        x: 193
-        y: 3
-        width: 53
-        height: 10
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 29a49b5e37aab2cf0800000000000000
-      internalID: -275939537401066862
+      spriteID: c3204919ca2686d10800000000000000
+      internalID: 2119052117994111548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menu_3
+      name: Stroke-player-Alt_3
       rect:
         serializedVersion: 2
-        x: 289
-        y: 3
-        width: 42
-        height: 10
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8900ae59783a46120800000000000000
-      internalID: 2406227903653740696
+      spriteID: eaa4a3312f3cc9e60800000000000000
+      internalID: 7970460885011024558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Menu_4
+      name: Stroke-player-Alt_4
       rect:
         serializedVersion: 2
-        x: 385
-        y: 3
-        width: 22
-        height: 10
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +237,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc78c29cf8be693f0800000000000000
-      internalID: -894268473198475317
+      spriteID: 8042342f894f19840800000000000000
+      internalID: 5229229580090549256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stroke-player-Alt_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b224559427fe5faa0800000000000000
+      internalID: -6127728443832057301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stroke-player-Alt_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1369ec3fea506b0800000000000000
+      internalID: -5330662221756878418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stroke-player-Alt_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a73ab0b0d63b210800000000000000
+      internalID: 1347540607721241146
       vertices: []
       indices: 
       edges: []
@@ -238,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a65533fdb712c2047a90aac5e1da72e2
+    spriteID: b3e3fb74b99082d40a9a2e860f22c7d5
     internalID: 0
     vertices: []
     indices: 
@@ -246,13 +321,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Menu_0: -198938125430884413
-      Menu_1: -1909268238846872576
-      Menu_2: -275939537401066862
-      Menu_3: 2406227903653740696
-      Menu_4: -894268473198475317
+      Stroke-player-Alt_0: -7952709438160490669
+      Stroke-player-Alt_1: 7867319040026112633
+      Stroke-player-Alt_2: 2119052117994111548
+      Stroke-player-Alt_3: 7970460885011024558
+      Stroke-player-Alt_4: 5229229580090549256
+      Stroke-player-Alt_5: -6127728443832057301
+      Stroke-player-Alt_6: -5330662221756878418
+      Stroke-player-Alt_7: 1347540607721241146
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -18,9 +18,6 @@ public class PlayerMovement : MonoBehaviour
     private float verticalInput;
     private float pixelsPerUnit = 32f;
 
-    private float playerDeathAnimDuration = 1.5f;
-    private bool hasBeenLaunched = false;
-
     // Speed Control
 
     private float acceleration = 1.8f;
@@ -64,11 +61,6 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-        else if (GameData.isDead && !hasBeenLaunched)
-        {
-            StartCoroutine(OnDeath());
-            hasBeenLaunched = true;
-        }
         else if (GameData.gameCompleted)
         {
             verticalInput = 0f;
@@ -102,12 +94,5 @@ public class PlayerMovement : MonoBehaviour
         pos.y = Mathf.Round(pos.y * pixelsPerUnit) / pixelsPerUnit;
 
         transform.position = pos;
-    }
-
-    private IEnumerator OnDeath()
-    {
-        verticalInput = 0f;
-        yield return new WaitForSeconds(playerDeathAnimDuration);
-        verticalInput = -1f;
     }
 }
